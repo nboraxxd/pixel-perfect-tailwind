@@ -1,0 +1,8 @@
+@import 'tailwindcss';
+
+@theme {
+	--breakpoint-sm: 520px;
+	--breakpoint-lg: 976px;
+	--color-highlight: #6202ff;
+	--font-family-poppins: 'Poppins', sans-serif;
+}
