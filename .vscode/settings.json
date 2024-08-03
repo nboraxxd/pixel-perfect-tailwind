@@ -7,5 +7,6 @@
 	],
 	"workbench.editorAssociations": {
 		"*.db": "sqlite-viewer.view"
-	}
+	},
+	"github.copilot.editor.enableAutoCompletions": false
 }
