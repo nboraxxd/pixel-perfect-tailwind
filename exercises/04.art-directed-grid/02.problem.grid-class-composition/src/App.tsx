@@ -1,58 +1,25 @@
 import { EpicStackLogo, logos } from './logos/logos'
 
-/*
-	🧝‍♀️ I've scaffolded out some "lookup" objects we'll use
-	to map Tailwind Grid column and row classes in a way
-	that plays nice with Tailwind's JIT engine.
-*/
-
-/*
-	🦺 The two TypeScript 'Records' below ensure that the lookup objects 
-	have keys that match the possible values of the 'column' and 'row'
-	properties on the 'logos' array.
-*/
-
-/*
-		🐨 Remove the @ts-expect-error comment below to trigger the error
-	*/
-// @ts-expect-error
 const columnClasses: Record<(typeof logos)[number]['column'], string> = {
-	/*
-		🐨 Add the required keys to satisfy the type checker, and assign 
-		the correct Tailwind Grid column classes to each key.
-	*/
+	1: 'xl:col-start-1',
+	2: 'xl:col-start-2',
+	3: 'xl:col-start-3',
+	4: 'xl:col-start-4',
+	5: 'xl:col-start-5',
 }
 
-/*
-		🐨 Remove the @ts-expect-error comment below to trigger the error
-	*/
-// @ts-expect-error
 const rowClasses: Record<(typeof logos)[number]['row'], string> = {
-	/*
-		🐨 Add the required keys to satisfy the type checker, and assign 
-		the correct Tailwind Grid row classes to each key.
-	*/
+	1: 'xl:row-start-1',
+	2: 'xl:row-start-2',
+	3: 'xl:row-start-3',
+	4: 'xl:row-start-4',
+	5: 'xl:row-start-5',
+	6: 'xl:row-start-6',
 }
 
-/*
-	👩‍🔬 I've also created this "mini clsx" helper function that 
-	lets you combine multiple class strings together.
-*/
-
-// @ts-expect-error
 function clsx(...classes: string[]) {
 	return classes.filter(Boolean).join(' ')
 }
-
-/*
-	🧝‍♀️ Here's an example of how to use it:
-
-	<div 
-		className={clsx('some classes', 'more classnames', 'combined together')} 
-	/>
-
-	We'll use this in a few places going forward!
-*/
 
 export default function App() {
 	return (
@@ -73,13 +40,10 @@ export default function App() {
 				</div>
 				<ul className="flex max-w-3xl flex-wrap justify-center gap-2 sm:gap-4 xl:grid xl:grid-flow-col xl:grid-cols-5 xl:grid-rows-6">
 					{logos.map((logo) => (
-						/* 
-							🐨 Compose the correct columnClasses and rowClasses together 
-						*/
-						/*
-							💰 That's a great place to use the clsx helper function!
-						*/
-						<li key={logo.href}>
+						<li
+							key={logo.href}
+							className={clsx(columnClasses[logo.column], rowClasses[logo.row])}
+						>
 							<a
 								href={logo.href}
 								className="bg-highlight/[7%] grid size-20 place-items-center rounded-2xl p-4 sm:size-24"
