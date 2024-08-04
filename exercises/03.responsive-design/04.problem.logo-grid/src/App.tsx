@@ -17,10 +17,7 @@ export default function App() {
 						guide file for how to get your project off the ground!
 					</p>
 				</div>
-				{/* 
-					🐨 At the xl breakpoint, make the logo list a structured grid with 5 columns and 6 rows. The grid should flow from top to bottom, left to right.
-				*/}
-				<ul className="flex max-w-3xl flex-wrap justify-center gap-2 sm:gap-4">
+				<ul className="flex max-w-3xl flex-wrap justify-center gap-2 sm:gap-4 xl:grid xl:grid-flow-col xl:grid-cols-5 xl:grid-rows-6">
 					{logos.map((logo) => (
 						<li key={logo.href}>
 							<a
