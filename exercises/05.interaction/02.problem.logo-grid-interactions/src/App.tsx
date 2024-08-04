@@ -48,12 +48,7 @@ export default function App() {
 						>
 							<a
 								href={logo.href}
-								/* 
-									🐨 Add the hover and focus styles here. Make sure you cover:
-									- rotation and background color opacity changes
-									- focus ring & ring offset
-								*/
-								className="bg-highlight/[7%] grid size-20 place-items-center rounded-2xl p-4 sm:size-24"
+								className="bg-highlight/[7%] hover:bg-highlight/10 focus:ring-highlight grid size-20 place-items-center rounded-2xl p-4 transition hover:-rotate-6 focus:outline-none focus:ring-2 focus:ring-offset-2 sm:size-24"
 							>
 								<img src={logo.src} alt={logo.alt} />
 							</a>

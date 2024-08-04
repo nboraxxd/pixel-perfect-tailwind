@@ -32,13 +32,7 @@ export default function App() {
 					<p className="mt-4 text-slate-600 sm:text-lg md:mt-6 md:text-xl">
 						Check the{' '}
 						<a
-							/*
-								🐨 Add a class to remove the underline on hover.
-
-								Replace the default focus outline with 
-								a 'highlight' color 2px focus ring.
-							*/
-							className="text-black underline"
+							className="focus:ring-highlight text-black underline hover:no-underline focus:outline-none focus:ring-2"
 							href="#"
 						>
 							Getting Started
