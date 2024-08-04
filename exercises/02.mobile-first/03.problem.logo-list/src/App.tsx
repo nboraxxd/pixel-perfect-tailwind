@@ -17,39 +17,14 @@ export default function App() {
 						guide file for how to get your project off the ground!
 					</p>
 				</div>
-				<ul
-				/*  
-					🐨 Turn this 'ul' into a Flex wrapper. It should:
-					- wrap items (flex-wrap)
-					- center-align items (justify-content)
-					- have a level 2 gap between items (gap)
-					- have a 3xl max-width container
-				*/
-				>
+				<ul className="flex max-w-3xl flex-wrap justify-center gap-2">
 					{logos.map((logo) => (
 						<li key={logo.href}>
 							<a
 								href={logo.href}
-								/*  
-									🐨 Apply the logo tile styles on this 'a' element,
-									based on the Figma design.
-									Pay attention to the size, background opacity, 
-									border-radius and all!
-								*/
-
-								/* 
-									💰 To center the logo inside the tile, you can use: 
-										'grid place-items-center'
-								*/
+								className="bg-highlight/[7%] grid size-20 place-items-center rounded-2xl p-4"
 							>
-								<img
-									src={logo.src}
-									alt=""
-									/*  
-									🐨 Once you've styled the tiles, remove the w-16 class!
-								*/
-									className="w-16"
-								/>
+								<img src={logo.src} alt={logo.alt} />
 							</a>
 						</li>
 					))}
