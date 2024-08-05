@@ -6,17 +6,6 @@ export default {
 	content: ['./src/**/*.{ts,tsx,js,jsx}', './index.html'],
 	theme: {
 		extend: {
-			/* 
-				🐨 Transfer the `fontSize` theme 
-				extensions to the CSS file.
-			*/
-			fontSize: {
-				'4.5xl': ['2.625rem', '1.15'],
-				'5.5xl': ['3.375rem', '1'],
-			},
-			/* 
-				👨‍💼 Stop right there for this exercise.
-			*/
 			keyframes: {
 				'roll-reveal': {
 					from: { transform: 'rotate(12deg) scale(0)', opacity: '0' },

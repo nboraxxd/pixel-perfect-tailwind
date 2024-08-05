@@ -1,7 +1,8 @@
 @import 'tailwindcss';
 
-/* 
-  🐨 Use the `@theme` block to define CSS variables for 
-  the custom  screen sizes, colors and font-families 
-  defined in the `tailwind.config.ts` file.
-*/
+@theme {
+	--breakpoint-sm: 520px;
+	--breakpoint-lg: 976px;
+	--color-highlight: #6202ff;
+	--font-family-poppins: 'Poppins', sans-serif;
+}
