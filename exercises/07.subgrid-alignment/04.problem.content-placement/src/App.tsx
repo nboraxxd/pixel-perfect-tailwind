@@ -23,24 +23,11 @@ const rowClasses: Record<(typeof logos)[number]['row'], string> = {
 export default function App() {
 	return (
 		<div className="grid min-h-screen place-items-center px-4 py-16">
-			{/* 
-				🐨 Add a `7xl` max-width container to the 
-				parent Grid at the `xl` breakpoint
-			*/}
-			<div className="grid place-items-center gap-12 sm:gap-16 xl:grid-cols-[auto_1fr] xl:gap-x-24 xl:gap-y-4">
-				{/* 
-					🐨 
-						1. Put the Logo and Title on the same (first) subgrid row
-									Make sure the first column (logo) only use the space it needs
-
-						2. Coordinate the horizontal `gap` (level 4) on the subgrid
-
-						💰 You can use `grid-cols-[auto_1fr]` to achieve task #1
-				*/}
+			<div className="grid place-items-center gap-12 sm:gap-16 xl:max-w-7xl xl:grid-cols-[auto_1fr] xl:gap-x-24 xl:gap-y-4">
 				<div
 					className={clsx(
 						'flex max-w-md flex-col items-center text-center xl:items-start xl:text-left',
-						'xl:col-start-2 xl:row-span-2 xl:row-start-3 xl:grid xl:max-w-none xl:grid-rows-subgrid',
+						'xl:col-start-2 xl:row-span-2 xl:row-start-3 xl:grid xl:max-w-none xl:grid-cols-[auto_1fr] xl:grid-rows-subgrid xl:gap-4',
 					)}
 				>
 					<EpicStackLogo
@@ -61,17 +48,13 @@ export default function App() {
 					>
 						The <span className="text-highlight">Epic</span> Stack
 					</h1>
-
-					{/* 
-					🐨 
-						Make the `p` span across 2 columns
-				*/}
 					<p
 						className={clsx(
 							'mt-4 text-slate-600 sm:text-lg md:mt-6 md:text-xl',
 							// Animation
 							'animate-slide-top [animation-delay:0.8s]',
 							'xl:animate-slide-left xl:[animation-delay:1.3s]',
+							'xl:col-span-2',
 						)}
 					>
 						Check the{' '}

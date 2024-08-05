@@ -24,24 +24,10 @@ export default function App() {
 	return (
 		<div className="grid min-h-screen place-items-center px-4 py-16">
 			<div className="grid place-items-center gap-12 sm:gap-16 xl:grid-cols-[auto_1fr] xl:gap-x-24 xl:gap-y-4">
-				{/* 
-					🐨 At the `xl` breakpoint...
-
-						1. Turn the flex container into a Grid.
-						2. Align the rows of the content section grid with `subgrid`
-						3. Span the section across 2 grid rows
-						4. Make the content section start at the 2nd column and the 3rd row
-				*/}
-
-				{/* 
-					🐨 
-						While you're here, "undo" the `max-w-md` at the `xl` breakpoint with `xl:max-w-none`.
-						Also, you can remove the `xl:order-2` class. We're now controlling the 
-						grid cell position explicitly.
-				*/}
 				<div
 					className={clsx(
-						'flex max-w-md flex-col items-center text-center xl:order-2 xl:items-start xl:text-left',
+						'flex max-w-md flex-col items-center text-center xl:items-start xl:text-left',
+						'xl:col-start-2 xl:row-span-2 xl:row-start-3 xl:grid xl:max-w-none xl:grid-rows-subgrid',
 					)}
 				>
 					<EpicStackLogo

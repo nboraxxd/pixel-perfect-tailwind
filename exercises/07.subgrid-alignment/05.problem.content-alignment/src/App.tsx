@@ -24,12 +24,9 @@ export default function App() {
 	return (
 		<div className="grid min-h-screen place-items-center px-4 py-16">
 			<div className="grid place-items-center gap-12 sm:gap-16 xl:max-w-7xl xl:grid-cols-[auto_1fr] xl:gap-x-24 xl:gap-y-4">
-				{/* 
-					🐨 Remove the `xl:items-start` class on the content section
-				*/}
 				<div
 					className={clsx(
-						'flex max-w-md flex-col items-center text-center xl:items-start xl:text-left',
+						'flex max-w-md flex-col items-center text-center xl:text-left',
 						'xl:col-start-2 xl:row-span-2 xl:row-start-3 xl:grid xl:max-w-none xl:grid-cols-[auto_1fr] xl:grid-rows-subgrid xl:gap-4',
 					)}
 				>
@@ -41,14 +38,9 @@ export default function App() {
 							'xl:animate-slide-left xl:[animation-delay:0.5s]',
 						)}
 					/>
-
-					{/* 
-						🐨 Remove the margin-top at the `xl` breakpoint 
-							 to allow the `h1` to be vertically centered
-					*/}
 					<h1
 						className={clsx(
-							'sm:text-4.5xl lg:text-5.5xl mt-6 text-4xl font-medium md:mt-8 md:text-5xl',
+							'sm:text-4.5xl lg:text-5.5xl mt-6 text-4xl font-medium md:mt-8 md:text-5xl xl:mt-0',
 							// Animation
 							'animate-slide-top [animation-delay:0.3s]',
 							'xl:animate-slide-left xl:[animation-delay:0.8s]',
@@ -56,13 +48,9 @@ export default function App() {
 					>
 						The <span className="text-highlight">Epic</span> Stack
 					</h1>
-
-					{/* 
-						🐨 Remove the margin-top at the `xl` breakpoint
-					*/}
 					<p
 						className={clsx(
-							'mt-4 text-slate-600 sm:text-lg md:mt-6 md:text-xl',
+							'mt-4 text-slate-600 sm:text-lg md:mt-6 md:text-xl xl:mt-0',
 							// Animation
 							'animate-slide-top [animation-delay:0.8s]',
 							'xl:animate-slide-left xl:[animation-delay:1.3s]',
