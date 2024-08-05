@@ -26,29 +26,19 @@ export default function App() {
 			<div className="grid place-items-center gap-12 sm:gap-16 xl:grid-cols-[auto_1fr] xl:gap-24">
 				<div className="flex max-w-md flex-col items-center text-center xl:order-2 xl:items-start xl:text-left">
 					<EpicStackLogo
-						/* 
-							👩‍🔬 I've used clsx() here purely for organisation purposes.
-							I've separated the animation classes so it's a little 
-							easier to distinguish styling concerns.
-
-							Feel free to do the same when you feel overwhelmed!
-						*/
 						className={clsx(
 							'size-20',
-							/* 
-								🐨 Add the 'animate-slide-left' classname at the 'xl' breakpoint.
-							*/
+							// Animation
 							'animate-slide-top',
+							'xl:animate-slide-left',
 						)}
 					/>
 					<h1
 						className={clsx(
 							'sm:text-4.5xl lg:text-5.5xl mt-6 text-4xl font-medium md:mt-8 md:text-5xl',
-							/* 
-								🐨 Add the 'animate-slide-left' classname at the 'xl' breakpoint.
-								Make sure the animation delay still works!
-							*/
+							// Animation
 							'animate-slide-top [animation-delay:0.3s]',
+							'xl:animate-slide-left xl:[animation-delay:0.3s]',
 						)}
 					>
 						The <span className="text-highlight">Epic</span> Stack
@@ -56,11 +46,9 @@ export default function App() {
 					<p
 						className={clsx(
 							'mt-4 text-slate-600 sm:text-lg md:mt-6 md:text-xl',
-							/* 
-								🐨 Add the 'animate-slide-left' classname at the 'xl' breakpoint.
-								Make sure the animation delay still works!
-							*/
+							// Animation
 							'animate-slide-top [animation-delay:0.8s]',
+							'xl:animate-slide-left xl:[animation-delay:0.8s]',
 						)}
 					>
 						Check the{' '}

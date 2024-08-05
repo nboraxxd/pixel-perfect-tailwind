@@ -25,24 +25,11 @@ export default function App() {
 		<div className="grid min-h-screen place-items-center px-4 py-16">
 			<div className="grid place-items-center gap-12 sm:gap-16 xl:grid-cols-[auto_1fr] xl:gap-24">
 				<div className="flex max-w-md flex-col items-center text-center xl:order-2 xl:items-start xl:text-left">
-					{/* 
-						🐨 Add the 'slide-top' classname to the EpicStackLogo component. 
-					*/}
-					<EpicStackLogo className="size-20" />
-
-					{/* 
-						🐨 Add the 'slide-top' classname to the h1. 
-						Use an arbitrary property to set an 'animation-delay' of 0.3s.
-					*/}
-					<h1 className="sm:text-4.5xl lg:text-5.5xl mt-6 text-4xl font-medium md:mt-8 md:text-5xl">
+					<EpicStackLogo className="animate-slide-top size-20" />
+					<h1 className="sm:text-4.5xl lg:text-5.5xl animate-slide-top mt-6 text-4xl font-medium [animation-delay:0.3s] md:mt-8 md:text-5xl">
 						The <span className="text-highlight">Epic</span> Stack
 					</h1>
-
-					{/* 
-						🐨 Add the 'slide-top' classname to the paragraph. 
-						Use an arbitrary property to set an 'animation-delay' of 0.8s.
-					*/}
-					<p className="mt-4 text-slate-600 sm:text-lg md:mt-6 md:text-xl">
+					<p className="animate-slide-top mt-4 text-slate-600 [animation-delay:0.8s] sm:text-lg md:mt-6 md:text-xl">
 						Check the{' '}
 						<a
 							className="focus:ring-highlight text-black underline hover:no-underline focus:outline-none focus:ring-2"

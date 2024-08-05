@@ -62,28 +62,15 @@ export default function App() {
 					</p>
 				</div>
 				<ul className="flex max-w-3xl flex-wrap justify-center gap-2 sm:gap-4 xl:grid xl:grid-flow-col xl:grid-cols-5 xl:grid-rows-6">
-					{logos.map((logo) => (
+					{logos.map((logo, i) => (
 						<li
-							/* 
-								🐨 Grab the `index` parameter from the `.map()` function above, and find a way to "pass" this index to CSS.
-
-								💰 Hint: you probably want to define a CSS variable (like `--loop-index`) and assign the `.map()` index to it ✨
-							*/
 							key={logo.href}
+							style={{ '--loop-index': i } as React.CSSProperties}
 							className={clsx(
 								columnClasses[logo.column],
 								rowClasses[logo.row],
 								'animate-fade-in motion-safe:animate-roll-reveal',
-								/* 
-									🐨 If the user has not requested reduced motion, add 
-									an "animation-delay" (arbitrary property) classname. 
-									
-									Increase the delay for each logo — experiment with different values!
-
-									👨‍💼 
-									If you feel uninspired, I personally think 
-									that `0.07s` works really well.
-								*/
+								'motion-safe:[animation-delay:calc(0.07s*var(--loop-index))]',
 							)}
 						>
 							<a

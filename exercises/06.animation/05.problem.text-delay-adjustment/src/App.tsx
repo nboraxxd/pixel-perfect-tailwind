@@ -30,10 +30,7 @@ export default function App() {
 							'size-20',
 							// Animation
 							'animate-slide-top',
-							/* 
-								🐨 Add an 'animation-delay' of 0.5s at the 'xl' breakpoint
-							*/
-							'xl:animate-slide-left',
+							'xl:animate-slide-left xl:[animation-delay:0.5s]',
 						)}
 					/>
 					<h1
@@ -41,10 +38,7 @@ export default function App() {
 							'sm:text-4.5xl lg:text-5.5xl mt-6 text-4xl font-medium md:mt-8 md:text-5xl',
 							// Animation
 							'animate-slide-top [animation-delay:0.3s]',
-							/* 
-								🐨 Increase the 'animation-delay' by half a second at the 'xl' breakpoint
-							*/
-							'xl:animate-slide-left xl:[animation-delay:0.3s]',
+							'xl:animate-slide-left xl:[animation-delay:0.8s]',
 						)}
 					>
 						The <span className="text-highlight">Epic</span> Stack
@@ -54,10 +48,7 @@ export default function App() {
 							'mt-4 text-slate-600 sm:text-lg md:mt-6 md:text-xl',
 							// Animation
 							'animate-slide-top [animation-delay:0.8s]',
-							/* 
-								🐨 Increase the 'animation-delay' by half a second at the 'xl' breakpoint
-							*/
-							'xl:animate-slide-left xl:[animation-delay:0.8s]',
+							'xl:animate-slide-left xl:[animation-delay:1.3s]',
 						)}
 					>
 						Check the{' '}
